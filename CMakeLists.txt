@@ -26,12 +26,7 @@ include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-add_compile_options(
-    -D_POSIX_C_SOURCE=200809L
-    -D_GNU_SOURCE
-)
-
-add_library(json SHARED 
+add_library(json_parser SHARED 
     src/json_api.c
     src/json_ast.c
     ${BISON_JsonParser_OUTPUTS}
@@ -39,3 +34,6 @@ add_library(json SHARED
 )
 
 add_subdirectory(tests)
+
+add_subdirectory(example)
+

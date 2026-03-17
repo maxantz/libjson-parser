@@ -1,4 +1,3 @@
-//#include <sched.h>
 #include <gtest/gtest.h>
 
 extern "C" {
@@ -46,3 +45,4 @@ TEST(JsonParser, ParseInvalidJson)
 
     ASSERT_EQ(root, nullptr);
 }
+
